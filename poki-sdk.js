@@ -64,8 +64,6 @@
 		displayAd: t.throwNotLoaded,
 		destroyAd: t.throwNotLoaded,
 		getLeaderboard: t.handleAutoResolvePromise,
-		measure: function (e1, e2, e3) {
-		},
 		getSharableURL: function() {
 			return new Promise((function(e, n) {
 				return n()
@@ -79,7 +77,7 @@
 	})), ["setDebug", "gameplayStart", "gameplayStop", "gameLoadingProgress", "happyTime", "setPlayerAge", "togglePlayerAdvertisingConsent", "logError", "sendHighscore", "setDebugTouchOverlayController"].forEach((function(e) {
 		window.PokiSDK[e] = t.oneArgument(e)
 	}));
-	var o, i = ((o = window.pokiSDKVersion) || (o = e("ab") || "v2.263.0"), "/poki-sdk-" + (n ? "kids" : "core") + "-" + o + ".js?v=2"),
+	var o, i = ((o = window.pokiSDKVersion) || (o = e("ab") || "v2.263.0"), "/js-core/poki-sdk-" + (n ? "kids" : "core") + "-" + o + ".js"),
 		r = document.createElement("script");
 	r.setAttribute("src", i), r.setAttribute("type", "text/javascript"), r.setAttribute("crossOrigin", "anonymous"), r.onload = function() {
 		return t.dequeue()
